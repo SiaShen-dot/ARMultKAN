@@ -1,9 +1,8 @@
 # Adaptive Grid-based Residual Multiplicative Kolmogorov–Arnold Networks and Their Application to Physics-Informed Learning
 
+## Abstract
 
-
-This repository contains the official implementation for training and validating the Physics-Informed ARMultKAN (PI-ARM) and its baseline PI-RM (without adaptive) models for solving partial differential equations (PDEs).
-
+Kolmogorov-Arnold Networks (KANs) and their multiplicative variants (MultKANs) have emerged as a promising alternative to traditional Multi-Layer Perceptrons, replacing fixed activation functions with learnable splines. However, this novel design introduces two inherent architectural challenges: 1) the unconstrained learning of spline functions can lead to pathological behaviors and training instability, and 2) their grid adaptation mechanism is purely data-driven, allocating resolution based on data density rather than model performance, which leads to a suboptimal trade-off between accuracy and computational cost. To overcome these fundamental limitations, we propose the Adaptive Grid-based Residual MultKAN (ARMultKAN). Our architecture introduces two synergistic improvements. First, we incorporate skip connections to create a stable Residual MultKAN (RMultKAN) backbone, theoretically guaranteeing stable gradient dynamics as proven by our Gradient Decomposition Theorem. Second, we develop a loss-driven Adaptive Grid Update (AGU) mechanism that intelligently allocates grid points to high-complexity regions, enhancing representational power without biasing the training objective. The efficacy of this approach is formally established by our Approximation Theorem. To demonstrate the practical benefits of our stabilized and efficient architecture, we apply it within a physics-informed framework to solve complex partial differential equations. This application, termed Physics-Informed ARMultKAN (PI-ARM), leverages the physics-informed loss to simultaneously optimize network parameters and guide the adaptive grid. Comprehensive experiments validate that the RMultKAN backbone surpasses MultKANs in stability and accuracy, and the full PI-ARM framework significantly outperforms state-of-the-art physics-informed models.
 
 
 ## Overview
@@ -80,4 +79,5 @@ To reproduce the results, please follow these steps:
 
 
 - Open and run the `Val_Diffusion_PIARM.ipynb` notebook.
+
 - This notebook loads the trained models from the `/model` directory and performs a detailed validation and error analysis.
