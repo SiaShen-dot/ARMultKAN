@@ -76,4 +76,6 @@ python LQR_HJB_train.py \
 
 ## License
 
-This project is released for academic research purposes.
+This project is released under the MIT License.
+
+See the LICENSE file for details.
