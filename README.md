@@ -1,7 +1,5 @@
 # ARMultKAN
 
-**Adaptive-Grid Residual Multiplicative Kolmogorov-Arnold Networks (ARMultKAN)**
-
 Official implementation of:
 
 > **Adaptive Grid-based Residual Multiplicative KANs for Physics-Informed Learning**
